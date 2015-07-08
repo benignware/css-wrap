@@ -8,6 +8,22 @@
 npm install grunt-css-wrap --save-dev
 ```
 
+## Usage
+
+`csswrap(string|file, options)`
+
+```js
+var
+  css_wrap = require('css-wrap'),
+  output = css_wrap('.some-css-selector { background: green; }', {
+    selector: '.my-app'
+  });
+console.log(output)
+// .my-app .some-css-selector {
+//   background: green;
+// }
+```
+
 ## Options
 
 #### options.selector
