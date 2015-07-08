@@ -1,6 +1,6 @@
 {
   "name": "css-wrap",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Wrap CSS rules in a namespace",
   "main": "css_wrap.js",
   "homepage": "https://github.com/benignware/css-wrap",
