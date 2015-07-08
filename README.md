@@ -2,6 +2,12 @@
 
 > Wrap CSS rules in a namespace
 
+## Install
+
+```shell
+npm install grunt-css-wrap --save-dev
+```
+
 ## Options
 
 #### options.selector
