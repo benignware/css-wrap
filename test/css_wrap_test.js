@@ -33,7 +33,7 @@ exports.css_wrap = {
     
     var
       options = {
-        selector: '.my-css-wrapper'
+        selector: '.my-app'
       },
       result = css_wrap(path.join(__dirname, '/fixtures/styles.css'), options),
       actual,
