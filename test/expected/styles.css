@@ -1,0 +1,9 @@
+.my-css-wrapper .some-css-selector {
+  background: green;
+}
+
+@media (min-width: 768px) {
+  .my-css-wrapper .some-css-selector {
+    width: 750px;
+  }
+}
