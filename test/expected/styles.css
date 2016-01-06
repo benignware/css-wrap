@@ -2,6 +2,10 @@
   background: green;
 }
 
+.skip-me {
+  bacground: red;
+}
+
 @media (min-width: 768px) {
   .my-app .some-css-selector {
     width: 750px;

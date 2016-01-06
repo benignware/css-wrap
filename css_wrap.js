@@ -3,7 +3,7 @@
  * https://github.com/benignware/css-wrap
  *
  * @See https://github.com/benignware/grunt-css-wrap
- * 
+ *
  * Forked and enhanced
  * https://github.com/zanzamar/grunt-css-wrap
  *
@@ -23,6 +23,7 @@ var
     return list.map( function( r ) {
       if ( r.selectors ) {
         r.selectors.forEach( function( s, index ) {
+          if (options.skip && options.skip.test(s)) return
           var selector = options.selector ? options.selector + " " + s : s;
           r.selectors[ index ] = selector;
         });
@@ -36,7 +37,8 @@ var
   css_wrap = function( string, options ) {
     options = deepmerge({
       // Defaults
-      selector: ".css-wrap"
+      selector: ".css-wrap",
+      skip: null
     }, options || {});
     if (fs.existsSync(path.resolve(string))) {
       string = fs.readFileSync(string).toString();
