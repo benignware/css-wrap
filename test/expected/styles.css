@@ -3,7 +3,7 @@
 }
 
 .skip-me {
-  bacground: red;
+  background: red;
 }
 
 @media (min-width: 768px) {
