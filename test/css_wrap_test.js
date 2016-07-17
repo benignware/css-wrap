@@ -30,22 +30,23 @@ exports.css_wrap = {
   },
   test: function(test) {
     test.expect(1);
-    
+
     var
       options = {
-        selector: '.my-app'
+        selector: '.my-app',
+        skip: /^\.skip-me/
       },
       result = css_wrap(path.join(__dirname, '/fixtures/styles.css'), options),
       actual,
       expected;
-    
+
     mkdirp('tmp');
     fs.writeFileSync('tmp/styles.css', result);
-    
+
     actual = fs.readFileSync('tmp/styles.css').toString();
     expected = fs.readFileSync(path.join(__dirname, '/expected/styles.css')).toString();
-    
-    test.equal(actual, expected, 'CSS Files should match');
+
+    test.strictEqual(actual, expected, 'CSS Files should match');
 
     test.done();
   }

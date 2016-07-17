@@ -1,6 +1,11 @@
 .some-css-selector {
   background: green;
 }
+
+.skip-me {
+  background: red;
+}
+
 @media (min-width: 768px) {
   .some-css-selector {
     width: 750px;
